@@ -66,8 +66,6 @@ int main(int argc, char* arg[]) {
         close(read_d);
         close(output_d);
     }
-
-
-
+    
     return 0;
 }
