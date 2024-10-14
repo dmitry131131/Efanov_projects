@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+#include <time.h>
+
 #include "fifo_com.h"
 #include "IO.h"
 
@@ -58,9 +60,14 @@ int main(int argc, char* arg[]) {
         int output_d = crate_output_file(OUTPUT_FILENAME);
         if (output_d == -1) return 1;
 
+        clock_t proc_time = clock();
+
         while (read_from_file(&buffer, read_d)) {
             write_to_file(&buffer, output_d);
         } 
+
+        proc_time = clock() - proc_time;
+        printf("Receive time: %ld\n", proc_time);
 
         buffer_dtor(&buffer);
         close(read_d);

@@ -3,6 +3,10 @@
 
 #include <stdio.h>
 
+#define SMALL_BUFFER_SIZE  8192
+#define MEDIUM_BUFFER_SIZE 65536
+#define LARGE_BUGGER_SIZE  1048576
+
 typedef struct Buffer_ {
     char* buffer;
     size_t capacity;

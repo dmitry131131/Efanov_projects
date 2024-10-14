@@ -5,6 +5,8 @@
 #include <string.h>
 #include <unistd.h>
 
+#include <time.h>
+
 #include "IO.h"
 #include "msg_com.h"
 
@@ -70,6 +72,8 @@ int main() {
         int output_d = crate_output_file(OUTPUT_FILENAME);
         if (output_d == -1) return 1;
 
+        clock_t proc_time = clock();
+
         int message_len = 0;
         while ((message_len = msgrcv(msg_d, &rbuf, BUFFER_CAPACITY, MSG_TYPE, 0))) {
             if (message_len == -1) {
@@ -82,6 +86,9 @@ int main() {
                 return 1;
             }
         }
+
+        proc_time = clock() - proc_time;
+        printf("Receive time: %ld\n", proc_time);
         
         close(output_d);
         struct msqid_ds qstatus;

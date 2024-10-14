@@ -5,7 +5,7 @@
 #define OUTPUT_FILENAME "output_file.txt"
 
 #define MSG_TYPE 1
-#define BUFFER_CAPACITY 4096
+#define BUFFER_CAPACITY MEDIUM_BUFFER_SIZE
 
 typedef struct _Massage {
     long mtype;
