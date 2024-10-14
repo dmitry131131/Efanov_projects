@@ -21,6 +21,9 @@ int main() {
 
     // Parent proccess (writer)
     if (pid) {
+        Buffer buffer = {};
+        buffer_ctor(&buffer, BUFFER_CAPACITY);
+
         int msg_d = msgget(MSG_ID, IPC_CREAT | 0666);
         if (msg_d == -1) {
             perror("parent msgget error ");
@@ -35,13 +38,26 @@ int main() {
         if (input_d == -1) return 1;
 
         int msg_len = 0;
-        while ((msg_len = read(input_d, sbuf.mtext, BUFFER_CAPACITY))) {
+        while ((msg_len = read_from_file(&buffer, input_d))) {
             if (msg_len == -1) {
                 perror("read error ");
                 return 1;
             }
 
-            if((msgsnd(msg_d, (void *) &sbuf, msg_len, 0))) {
+            size_t current_position = 0;
+            while (current_position + MESSAGE_CAPACITY < buffer.size) {
+                memcpy(sbuf.mtext, buffer.buffer + current_position, MESSAGE_CAPACITY);
+
+                current_position += MESSAGE_CAPACITY;
+
+                if((msgsnd(msg_d, (void *) &sbuf, MESSAGE_CAPACITY, 0))) {
+                    perror("msgsnd error ");
+                    return 1;
+                }
+            }
+
+            memcpy(sbuf.mtext, buffer.buffer + current_position, buffer.size - current_position);
+            if((msgsnd(msg_d, (void *) &sbuf, buffer.size - current_position, 0))) {
                 perror("msgsnd error ");
                 return 1;
             }
@@ -53,6 +69,7 @@ int main() {
         }
 
         close(input_d);
+        buffer_dtor(&buffer);
 
         int status = 0;
         waitpid(pid, &status, 0);
@@ -75,7 +92,7 @@ int main() {
         clock_t proc_time = clock();
 
         int message_len = 0;
-        while ((message_len = msgrcv(msg_d, &rbuf, BUFFER_CAPACITY, MSG_TYPE, 0))) {
+        while ((message_len = msgrcv(msg_d, &rbuf, MESSAGE_CAPACITY, MSG_TYPE, 0))) {
             if (message_len == -1) {
                 perror("msgrcv error ");
                 return 1;
