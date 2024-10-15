@@ -16,10 +16,10 @@
 
 CLOCKS_PER_SEC == 1000
 
-    -   | FIFO |  MSG | SHM  
---------|------|------|------
- SMALL  | 1870 | 2050 | 2500   
- MEDIUM | 1770 | 2050 | 1590   
- HUGE   | 2050 | 2150 | 1300   
+|<!-- -->| FIFO |  MSG | SHM  |
+|:------:|:----:|:----:|:----:|
+| SMALL  | 1870 | 2050 | 2500 | 
+| MEDIUM | 1770 | 2050 | 1590 |  
+| HUGE   | 2050 | 2150 | 1300 |  
 
-<img src="IPC_performance.pdf"/> 
+![IPC performance](./IPC_performance.png)
