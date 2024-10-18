@@ -1,17 +1,48 @@
 #include <stdio.h>
+#include <pthread.h>
 
+#include "config.h"
 #include "function.h"
 #include "monte_carlo.h"
 
 int main() {
 
     Integral integral = {
-                        .start    = 1.0,
-                        .end      = 2.0,
-                        .function = &function,
+                        .start    = 2.0,
+                        .end      = 3.0,
+                        .function = function,
                         .result   = 0.0 };
 
-    monte_carlo(&integral);
+    double len = integral.end - integral.start;
+    double div = len / THREADS_COUNT;
+
+    pthread_t threads[THREADS_COUNT]       = {};
+    Integral  sub_integrals[THREADS_COUNT] = {};
+
+    for (size_t i = 0; i < THREADS_COUNT; i++) {
+        sub_integrals[i].start    = integral.start + div * i;
+        sub_integrals[i].end      = sub_integrals[i].start + div;
+        sub_integrals[i].function = integral.function;
+        if (i) sub_integrals[i].function = function2;
+
+        printf("Start: %lf\n", sub_integrals[i].start);
+        printf("End: %lf\n", sub_integrals[i].end);
+        printf("Res: %lf\n", sub_integrals[i].result);
+
+        pthread_create(&(threads[i]), NULL, monte_carlo, &(sub_integrals[i]));
+    }
+
+    for (size_t i = 0; i < THREADS_COUNT; i++) {// BUG slow
+        pthread_join(threads[i], NULL);
+
+        integral.result += sub_integrals[i].result;
+
+        printf("Start: %lf\n", sub_integrals[i].start);
+        printf("End: %lf\n", sub_integrals[i].end);
+        printf("Res: %lf\n", sub_integrals[i].result);
+    }
+
+    printf("Final: %lf\n", integral.result);
 
     return 0;
 }
