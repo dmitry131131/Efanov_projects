@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <pthread.h>
+#include <stdlib.h>
 
 #include "config.h"
 #include "function.h"
@@ -23,11 +24,6 @@ int main() {
         sub_integrals[i].start    = integral.start + div * i;
         sub_integrals[i].end      = sub_integrals[i].start + div;
         sub_integrals[i].function = integral.function;
-        if (i) sub_integrals[i].function = function2;
-
-        printf("Start: %lf\n", sub_integrals[i].start);
-        printf("End: %lf\n", sub_integrals[i].end);
-        printf("Res: %lf\n", sub_integrals[i].result);
 
         pthread_create(&(threads[i]), NULL, monte_carlo, &(sub_integrals[i]));
     }
@@ -36,10 +32,6 @@ int main() {
         pthread_join(threads[i], NULL);
 
         integral.result += sub_integrals[i].result;
-
-        printf("Start: %lf\n", sub_integrals[i].start);
-        printf("End: %lf\n", sub_integrals[i].end);
-        printf("Res: %lf\n", sub_integrals[i].result);
     }
 
     printf("Final: %lf\n", integral.result);

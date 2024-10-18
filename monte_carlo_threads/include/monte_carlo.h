@@ -1,7 +1,7 @@
 #ifndef MONTE_CARLO_H
 #define MONTE_CARLO_H
 
-#define POINTS_COUNT 100000000
+#define POINTS_COUNT 1000000000
 
 typedef struct _Int {
     double start, end;          // Integral limits
