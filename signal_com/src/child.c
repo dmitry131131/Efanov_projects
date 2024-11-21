@@ -7,6 +7,7 @@
 #include <sys/stat.h>
 #include <semaphore.h>
 #include <fcntl.h>
+#include <ucontext.h>
 
 #include "config.h"
 #include "child.h"
@@ -16,7 +17,11 @@ static void handler(int signo, siginfo_t *info, void *context) {
     extern sem_t* child_sem;
 
     sem_wait(child_sem);
-    printf("%c", info->si_value);
+
+    FILE* output_file = fopen(OUTPUT_FILENAME, "ab");
+    fwrite(&(info->si_value), sizeof(char), 1, output_file);
+    fclose(output_file);
+
     sem_post(parent_sem);
 }
 
@@ -32,6 +37,9 @@ int child_function() {
         perror("Sigaction: ");
         return -1;
     }
+
+    FILE* output_file = fopen(OUTPUT_FILENAME, "w");
+    fclose(output_file);
 
     sem_post(parent_sem);
 
