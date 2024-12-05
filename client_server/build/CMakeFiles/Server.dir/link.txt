@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file,CMakeFiles/Server.dir/link.d CMakeFiles/Server.dir/server/src/main.c.o -o bin/Server
