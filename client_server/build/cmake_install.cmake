@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/client/cmake_install.cmake")
   include("/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/server/cmake_install.cmake")
+  include("/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/common/cmake_install.cmake")
 
 endif()
 

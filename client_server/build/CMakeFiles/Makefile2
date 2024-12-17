@@ -67,6 +67,7 @@ all: CMakeFiles/Client.dir/all
 all: CMakeFiles/Server.dir/all
 all: client/all
 all: server/all
+all: common/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -74,11 +75,13 @@ codegen: CMakeFiles/Client.dir/codegen
 codegen: CMakeFiles/Server.dir/codegen
 codegen: client/codegen
 codegen: server/codegen
+codegen: common/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: client/preinstall
 preinstall: server/preinstall
+preinstall: common/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -86,6 +89,7 @@ clean: CMakeFiles/Client.dir/clean
 clean: CMakeFiles/Server.dir/clean
 clean: client/clean
 clean: server/clean
+clean: common/clean
 .PHONY : clean
 
 #=============================================================================
@@ -125,6 +129,44 @@ client/src/preinstall:
 # Recursive "clean" directory target.
 client/src/clean:
 .PHONY : client/src/clean
+
+#=============================================================================
+# Directory level rules for directory common
+
+# Recursive "all" directory target.
+common/all: common/src/all
+.PHONY : common/all
+
+# Recursive "codegen" directory target.
+common/codegen: common/src/codegen
+.PHONY : common/codegen
+
+# Recursive "preinstall" directory target.
+common/preinstall: common/src/preinstall
+.PHONY : common/preinstall
+
+# Recursive "clean" directory target.
+common/clean: common/src/clean
+.PHONY : common/clean
+
+#=============================================================================
+# Directory level rules for directory common/src
+
+# Recursive "all" directory target.
+common/src/all:
+.PHONY : common/src/all
+
+# Recursive "codegen" directory target.
+common/src/codegen:
+.PHONY : common/src/codegen
+
+# Recursive "preinstall" directory target.
+common/src/preinstall:
+.PHONY : common/src/preinstall
+
+# Recursive "clean" directory target.
+common/src/clean:
+.PHONY : common/src/clean
 
 #=============================================================================
 # Directory level rules for directory server
@@ -171,12 +213,12 @@ server/src/clean:
 CMakeFiles/Client.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles --progress-num=1,2 "Built target Client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles --progress-num=1,2,3 "Built target Client"
 .PHONY : CMakeFiles/Client.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles 0
 .PHONY : CMakeFiles/Client.dir/rule
@@ -202,12 +244,12 @@ CMakeFiles/Client.dir/clean:
 CMakeFiles/Server.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles --progress-num=3,4 "Built target Server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles --progress-num=4,5,6,7,8 "Built target Server"
 .PHONY : CMakeFiles/Server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles 0
 .PHONY : CMakeFiles/Server.dir/rule

@@ -10,3 +10,7 @@
 /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/server/CMakeFiles/rebuild_cache.dir
 /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/server/src/CMakeFiles/edit_cache.dir
 /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/server/src/CMakeFiles/rebuild_cache.dir
+/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/common/CMakeFiles/edit_cache.dir
+/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/common/CMakeFiles/rebuild_cache.dir
+/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/common/src/CMakeFiles/edit_cache.dir
+/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/common/src/CMakeFiles/rebuild_cache.dir

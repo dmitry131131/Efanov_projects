@@ -86,18 +86,66 @@ CMakeFiles/Server.dir/server/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Server.dir/server/src/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/main.c -o CMakeFiles/Server.dir/server/src/main.c.s
 
+CMakeFiles/Server.dir/server/src/server.c.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/server/src/server.c.o: /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/server.c
+CMakeFiles/Server.dir/server/src/server.c.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Server.dir/server/src/server.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Server.dir/server/src/server.c.o -MF CMakeFiles/Server.dir/server/src/server.c.o.d -o CMakeFiles/Server.dir/server/src/server.c.o -c /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/server.c
+
+CMakeFiles/Server.dir/server/src/server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Server.dir/server/src/server.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/server.c > CMakeFiles/Server.dir/server/src/server.c.i
+
+CMakeFiles/Server.dir/server/src/server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Server.dir/server/src/server.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/server.c -o CMakeFiles/Server.dir/server/src/server.c.s
+
+CMakeFiles/Server.dir/server/src/client.c.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/server/src/client.c.o: /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/client.c
+CMakeFiles/Server.dir/server/src/client.c.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Server.dir/server/src/client.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Server.dir/server/src/client.c.o -MF CMakeFiles/Server.dir/server/src/client.c.o.d -o CMakeFiles/Server.dir/server/src/client.c.o -c /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/client.c
+
+CMakeFiles/Server.dir/server/src/client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Server.dir/server/src/client.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/client.c > CMakeFiles/Server.dir/server/src/client.c.i
+
+CMakeFiles/Server.dir/server/src/client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Server.dir/server/src/client.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/client.c -o CMakeFiles/Server.dir/server/src/client.c.s
+
+CMakeFiles/Server.dir/common/src/buffer.c.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/common/src/buffer.c.o: /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/common/src/buffer.c
+CMakeFiles/Server.dir/common/src/buffer.c.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Server.dir/common/src/buffer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Server.dir/common/src/buffer.c.o -MF CMakeFiles/Server.dir/common/src/buffer.c.o.d -o CMakeFiles/Server.dir/common/src/buffer.c.o -c /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/common/src/buffer.c
+
+CMakeFiles/Server.dir/common/src/buffer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Server.dir/common/src/buffer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/common/src/buffer.c > CMakeFiles/Server.dir/common/src/buffer.c.i
+
+CMakeFiles/Server.dir/common/src/buffer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Server.dir/common/src/buffer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cybermeatball/Files/Efanov/Efanov_projects/client_server/common/src/buffer.c -o CMakeFiles/Server.dir/common/src/buffer.c.s
+
 # Object files for target Server
 Server_OBJECTS = \
-"CMakeFiles/Server.dir/server/src/main.c.o"
+"CMakeFiles/Server.dir/server/src/main.c.o" \
+"CMakeFiles/Server.dir/server/src/server.c.o" \
+"CMakeFiles/Server.dir/server/src/client.c.o" \
+"CMakeFiles/Server.dir/common/src/buffer.c.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
 
 bin/Server: CMakeFiles/Server.dir/server/src/main.c.o
+bin/Server: CMakeFiles/Server.dir/server/src/server.c.o
+bin/Server: CMakeFiles/Server.dir/server/src/client.c.o
+bin/Server: CMakeFiles/Server.dir/common/src/buffer.c.o
 bin/Server: CMakeFiles/Server.dir/build.make
 bin/Server: CMakeFiles/Server.dir/compiler_depend.ts
 bin/Server: CMakeFiles/Server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable bin/Server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable bin/Server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

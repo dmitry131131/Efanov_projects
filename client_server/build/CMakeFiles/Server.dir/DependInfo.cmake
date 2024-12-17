@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/common/src/buffer.c" "CMakeFiles/Server.dir/common/src/buffer.c.o" "gcc" "CMakeFiles/Server.dir/common/src/buffer.c.o.d"
+  "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/client.c" "CMakeFiles/Server.dir/server/src/client.c.o" "gcc" "CMakeFiles/Server.dir/server/src/client.c.o.d"
   "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/main.c" "CMakeFiles/Server.dir/server/src/main.c.o" "gcc" "CMakeFiles/Server.dir/server/src/main.c.o.d"
+  "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/server.c" "CMakeFiles/Server.dir/server/src/server.c.o" "gcc" "CMakeFiles/Server.dir/server/src/server.c.o.d"
   "" "bin/Server" "gcc" "CMakeFiles/Server.dir/link.d"
   )
 

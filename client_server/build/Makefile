@@ -166,6 +166,57 @@ client/src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/client/src/main.c.s
 .PHONY : client/src/main.c.s
 
+common/src/buffer.o: common/src/buffer.c.o
+.PHONY : common/src/buffer.o
+
+# target to build an object file
+common/src/buffer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/common/src/buffer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/common/src/buffer.c.o
+.PHONY : common/src/buffer.c.o
+
+common/src/buffer.i: common/src/buffer.c.i
+.PHONY : common/src/buffer.i
+
+# target to preprocess a source file
+common/src/buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/common/src/buffer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/common/src/buffer.c.i
+.PHONY : common/src/buffer.c.i
+
+common/src/buffer.s: common/src/buffer.c.s
+.PHONY : common/src/buffer.s
+
+# target to generate assembly for a file
+common/src/buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/common/src/buffer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/common/src/buffer.c.s
+.PHONY : common/src/buffer.c.s
+
+server/src/client.o: server/src/client.c.o
+.PHONY : server/src/client.o
+
+# target to build an object file
+server/src/client.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/server/src/client.c.o
+.PHONY : server/src/client.c.o
+
+server/src/client.i: server/src/client.c.i
+.PHONY : server/src/client.i
+
+# target to preprocess a source file
+server/src/client.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/server/src/client.c.i
+.PHONY : server/src/client.c.i
+
+server/src/client.s: server/src/client.c.s
+.PHONY : server/src/client.s
+
+# target to generate assembly for a file
+server/src/client.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/server/src/client.c.s
+.PHONY : server/src/client.c.s
+
 server/src/main.o: server/src/main.c.o
 .PHONY : server/src/main.o
 
@@ -190,6 +241,30 @@ server/src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/server/src/main.c.s
 .PHONY : server/src/main.c.s
 
+server/src/server.o: server/src/server.c.o
+.PHONY : server/src/server.o
+
+# target to build an object file
+server/src/server.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/server/src/server.c.o
+.PHONY : server/src/server.c.o
+
+server/src/server.i: server/src/server.c.i
+.PHONY : server/src/server.i
+
+# target to preprocess a source file
+server/src/server.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/server/src/server.c.i
+.PHONY : server/src/server.c.i
+
+server/src/server.s: server/src/server.c.s
+.PHONY : server/src/server.s
+
+# target to generate assembly for a file
+server/src/server.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/server/src/server.c.s
+.PHONY : server/src/server.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -203,9 +278,18 @@ help:
 	@echo "... client/src/main.o"
 	@echo "... client/src/main.i"
 	@echo "... client/src/main.s"
+	@echo "... common/src/buffer.o"
+	@echo "... common/src/buffer.i"
+	@echo "... common/src/buffer.s"
+	@echo "... server/src/client.o"
+	@echo "... server/src/client.i"
+	@echo "... server/src/client.s"
 	@echo "... server/src/main.o"
 	@echo "... server/src/main.i"
 	@echo "... server/src/main.s"
+	@echo "... server/src/server.o"
+	@echo "... server/src/server.i"
+	@echo "... server/src/server.s"
 .PHONY : help
 
 

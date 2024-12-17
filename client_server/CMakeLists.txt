@@ -8,8 +8,9 @@ set(SERVER Server)
 add_executable(${CLIENT})
 add_executable(${SERVER})
 
-add_subdirectory(client)
-add_subdirectory(server)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/client)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/server)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/common)
 
 set_target_properties(${CLIENT} ${SERVER}
                         PROPERTIES 

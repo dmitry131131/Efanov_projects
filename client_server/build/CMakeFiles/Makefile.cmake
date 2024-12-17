@@ -13,6 +13,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.31.0/CMakeSystem.cmake"
   "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/client/CMakeLists.txt"
   "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/client/src/CMakeLists.txt"
+  "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/common/CMakeLists.txt"
+  "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/common/src/CMakeLists.txt"
   "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/CMakeLists.txt"
   "/home/cybermeatball/Files/Efanov/Efanov_projects/client_server/server/src/CMakeLists.txt"
   "/usr/share/cmake/Modules/CMakeCCompiler.cmake.in"
@@ -141,6 +143,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "client/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "server/CMakeFiles/CMakeDirectoryInformation.cmake"
   "server/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "common/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "common/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
